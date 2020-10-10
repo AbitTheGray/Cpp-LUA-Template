@@ -44,5 +44,8 @@ target_link_libraries(LUA_Template lua sol2)
 #--------------------------------
 
 if(BUILD_TESTING)
+    include(CTest)
+    enable_testing()
+
     add_subdirectory(tests)
 endif()
