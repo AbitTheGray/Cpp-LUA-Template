@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(Template C CXX)
+project(LUA_Template C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(BUILD_SHARED_LIBS OFF)
@@ -33,10 +33,11 @@ add_subdirectory(lib)
 
 file(GLOB_RECURSE PROJECT_SOURCE src/*.hpp src/*.cpp src/*.h src/*.c)
 
-add_library(Template STATIC ${PROJECT_SOURCE})
-target_include_directories(Template PUBLIC src/)
+add_library(LUA_Template STATIC ${PROJECT_SOURCE})
+target_include_directories(LUA_Template PUBLIC src/)
 
-target_link_libraries(Template -static-libgcc -static-libstdc++ stdc++fs)
+target_link_libraries(LUA_Template -static-libgcc -static-libstdc++ stdc++fs)
+target_link_libraries(LUA_Template lua sol2)
 
 #--------------------------------
 # Source
