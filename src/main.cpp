@@ -3,8 +3,7 @@
 #include <lua.h>
 #include <sol/sol.hpp>
 
-int main()
+void library()
 {
     std::cout << "Hello, World!" << std::endl;
-    return 0;
 }
