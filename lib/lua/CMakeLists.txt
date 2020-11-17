@@ -8,7 +8,8 @@ endif()
 #--------------------------------
 # Library
 #--------------------------------
-file(GLOB LUA_SOURCE ${PROJECT_SOURCE_DIR}/src/*.h ${PROJECT_SOURCE_DIR}/src/*.c)
+
+file(GLOB LUA_SOURCE src/*.h src/*.c)
+
 add_library (lua STATIC ${LUA_SOURCE})
-#set_target_properties(lua PROPERTIES OUTPUT_NAME "lua")
-target_include_directories(lua PUBLIC ${PROJECT_SOURCE_DIR}/src/)
+target_include_directories(lua PUBLIC src/)

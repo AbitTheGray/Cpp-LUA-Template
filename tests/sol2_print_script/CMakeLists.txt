@@ -1,5 +1,5 @@
-add_executable(t_sol2_print_script main.cpp)
-target_link_libraries(t_sol2_print_script lua sol2 stdc++fs)
+add_executable(T_sol2_print_script main.cpp)
+target_link_libraries(T_sol2_print_script lua sol2 stdc++fs)
 configure_file(script.lua script.lua COPYONLY)
 
-add_test(NAME sol2_print_script COMMAND t_sol2_print_script)
+add_test(NAME sol2_print_script COMMAND T_sol2_print_script)

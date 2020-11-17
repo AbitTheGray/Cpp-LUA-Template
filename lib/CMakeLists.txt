@@ -1,13 +1,18 @@
 set(BUILD_SHARED_LIBS OFF)
+set(BUILD_TESTING OFF)
 
 #--------------------------------
 # LUA
 # Scripting language
 #--------------------------------
-add_subdirectory(lua)
+if(NOT TARGET lua)
+    add_subdirectory(lua)
+endif()
 
 #--------------------------------
 # sol2
 # Extended C++ support of LUA
 #--------------------------------
-add_subdirectory(sol2)
+if(NOT TARGET sol2)
+    add_subdirectory(sol2)
+endif()
